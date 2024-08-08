@@ -1,0 +1,144 @@
+body {
+    font-family: 'Courier New', Courier, monospace; /* Main font for the entire page */
+    margin: 0; 
+    padding: 0;
+    background-color: #f4f4f4; 
+    color: #333; 
+}
+
+/* Header and navigation styles */
+header {
+    background-color: #333; /* Dark gray background color */
+    color: #d2b48c;
+    padding: 20px 0; /* Vertical padding */
+    text-align: center; /* Center align text */
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Comic Sans font for header */
+}
+
+header img {
+    display: block; /* Block display for the logo image */
+    margin: 0 auto; /* Center the logo image */
+}
+
+/* Navigation styles */
+nav ul {
+    list-style-type: none; /* Remove default list style */
+    padding: 0; /* Remove default padding */
+}
+
+nav ul li {
+    display: inline; /* Display list items inline */
+    margin: 0 10px; /* Horizontal margin between items */
+}
+
+nav ul li a {
+    color: #d2b48c; /* Khaki text color for links */
+    text-decoration: none; /* Remove underline from links */
+    font-weight: bold; /* Bold text */
+    font-size: 18px; /* Font size */
+}
+
+/* Main content styles */
+main {
+    padding: 20px; /* Padding around the main content */
+    text-align: center; /* Center align text */
+}
+
+/* Section styles for product display */
+section {
+    display: flex; /* Flexbox layout */
+    justify-content: space-around; /* Space items evenly */
+    flex-wrap: wrap; /* Allow wrapping of items */
+    margin-top: 20px; /* Top margin */
+}
+
+/* Individual product styles */
+div {
+    background-color: #d2b48c; /* Khaki background color */
+    border: 2px solid #333; /* Dark gray border */
+    padding: 10px; /* Padding inside the box */
+    width: 30%; /* Width of each product box */
+    margin-bottom: 20px; /* Bottom margin */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Comic Sans font for product boxes */
+}
+
+div img {
+    max-width: 100%; /* Image takes up max width of the container */
+    height: auto; /* Maintain aspect ratio */
+    border: 1px solid #ddd; /* Light gray border */
+    margin-bottom: 10px; /* Bottom margin below the image */
+}
+
+/* Button styles */
+button {
+    background-color: #333; /* Dark gray background color */
+    color: #fff; /* White text color */
+    padding: 10px 20px; /* Padding inside the button */
+    border: none; /* No border */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Comic Sans font for buttons */
+}
+
+button:hover {
+    background-color: #555; /* Lighter gray background on hover */
+}
+
+/* Email Signup Section */
+#email-signup {
+    background-color: #d2b48c; /* Khaki background color */
+    padding: 20px; /* Padding inside the section */
+    text-align: center; /* Center align text */
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Comic Sans font for signup section */
+    border: 2px solid #333; /* Dark gray border */
+}
+
+#signup-form {
+    display: inline-block; /* Inline block layout */
+    margin-top: 20px; /* Top margin */
+}
+
+#signup-form label {
+    font-weight: bold; /* Bold text for labels */
+}
+
+#signup-form input {
+    padding: 10px; /* Padding inside the input box */
+    width: 300px; /* Fixed width for the input box */
+    margin-top: 10px; /* Top margin */
+    border: 2px solid #333; /* Dark gray border */
+}
+
+#signup-form button {
+    background-color: #333; /* Dark gray background color */
+    color: #fff; /* White text color */
+    padding: 10px 20px; /* Padding inside the button */
+    border: none; /* No border */
+    cursor: pointer; /* Pointer cursor on hover */
+    margin-top: 10px; /* Top margin */
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Comic Sans font for buttons */
+}
+
+#signup-form button:hover {
+    background-color: #555; /* Lighter gray background on hover */
+}
+
+/* Footer styles */
+footer {
+    background-color: #333; /* Dark gray background color */
+    color: #fff; /* White text color */
+    padding: 20px 0; /* Vertical padding */
+    text-align: center; /* Center align text */
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Comic Sans font for footer */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    section {
+        flex-direction: column; /* Stack items vertically */
+    }
+
+    div {
+        width: 100%; /* Full width for product boxes */
+    }
+}

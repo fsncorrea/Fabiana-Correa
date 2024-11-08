@@ -1,0 +1,12 @@
+main{
+background-color: aqua;
+height: 100px;
+width: 300px;   
+}
+
+
+
+main:hover{
+    background-color: #a8580e;
+    color: #f8f8f8;
+}

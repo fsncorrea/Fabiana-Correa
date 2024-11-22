@@ -1,0 +1,485 @@
+* {
+    margin:0;
+    padding:0;
+}
+
+/* Avoid horizontal scroll  */
+html,body {
+    overflow-x: hidden;
+  }
+
+
+/* inmport font */
+@font-face {
+    font-family: stanberry;
+    src: url(Stanberry.ttf);
+}
+  
+
+body {
+    background: rgb(250, 250, 250);
+    font-family: stanberry, Helvetica, Arial, sans-serif;
+}
+
+a {
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    text-decoration: none;
+}
+
+h1, h2 {
+  font-family: 'Oswald', sans-serif;
+}
+  
+/* navigation bar */
+  #navbar {
+    background: white;
+    color: rgb(13, 26, 38);
+    position: fixed;
+    top: 0;
+    height: 5em;
+    line-height: 5em;
+    width: 100vw;
+    z-index: 10;
+  }
+  
+  .nav-wrapper {
+    margin: auto;
+    text-align: center;
+    width: 70%;
+  } @media(max-width: 768px) {
+      .nav-wrapper {
+        width: 90%;
+      }
+    } @media(max-width: 638px) {
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-evenly;
+            width: 100%;
+        }
+      } 
+  
+  
+  .logo {
+    margin-top: 0.5em;
+    float: left;
+    margin-left: 5vw;
+  } 
+  
+  #navbar ul {
+    display: inline-block;
+    list-style: none;
+    /* margin-right: 14px; */
+    margin-top: -2px;
+    text-align: right;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    transition: transform 0.5s ease-out;
+    -webkit-transition: transform 0.5s ease-out;
+  } 
+  @media(max-width: 640px) {
+      .nav-wrapper a {
+        margin: 0;
+        font-size: small;
+      }
+    } 
+    @media(orientation: landscape) {
+        #navbar ul {
+          display: inline-block;
+        }
+      }
+  
+  #navbar li {
+    display: inline-block;
+  }
+  
+  #navbar li a {
+    color: rgb(13, 26, 38);
+    display: block;
+    font-size: 1em;
+    height: 4em;
+    letter-spacing: 1px;
+    margin: 0 20px;
+    padding: 0 4px;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+  }
+  
+  #navbar li a:hover {
+    /* border-bottom: 1px solid rgb(28, 121, 184); */
+    color: #db491e;
+    transition: all 1s ease;
+    font-weight: bold;
+    -webkit-transition: all 1s ease;
+  }
+  
+  /* Animated Bottom Line */
+  #navbar li a:before, #navbar li a:after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 1px;
+    bottom: -1px;
+    background: rgb(13, 26, 38);
+  }
+  
+  #navbar li a:before {
+    left: 0;
+    transition: 0.5s;
+  }
+  
+  #navbar li a:after {
+    background: rgb(13, 26, 38);
+    right: 0;
+    /* transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1); */
+  }
+  
+  #navbar li a:hover:before {
+    background: rgb(13, 26, 38);
+    width: 100%;
+    transition: width 0.5s cubic-bezier((0.22, 0.61, 0.36, 1));
+  }
+  
+  #navbar li a:hover:after {
+    background: transparent;
+    width: 100%;
+    /* transition: 0s; */
+  }
+  
+
+/*  Top area stylyng */
+#top-container  {
+    /* width: 100%; */
+   text-align: center;
+}
+
+/*  use pseudo class to add opacity to backgroud image  */
+#top-container::before {    
+    content: "";
+    background-image: url('teddy.jpeg');
+    background-position: left top;
+    background-repeat: repeat;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px; 
+}
+
+.cup-shadow {
+    position: relative; 
+}
+.cup-shadow p{
+  color: #e2c300;  
+  font-size: 3.5vw;
+  font-family: 'Oswald', sans-serif;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  position: absolute; 
+  top: 20%; 
+  left: 0; 
+  right:0;
+}
+
+#product-name {
+    position: relative;
+    margin-top: 10vw;
+    padding: 2em;
+    animation: SlideIn 2.5s infinite;
+}
+/* Slide in animation */
+@keyframes SlideIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-70%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+
+.trapezoid_reverse {
+    position: relative;
+    width: 35vw;
+    border-top: 9vw solid rgba(0,0,0,0.9);
+    border-left: 3vw solid transparent;
+    border-right: 3vw solid transparent;
+    margin:  0 auto;   
+  }
+
+  #top-container h1 {
+    position: relative;
+    color: white;
+    font-size: 3vw;
+    padding:2em;
+    font-weight: 300;
+    text-shadow: 1px 1px rgba(0,0,0,0.9);
+  }
+
+/* About section styling */
+#about {
+    background-color: rgb(255,255,255);
+    /* margin: 5vw 0 0 0; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* column-gap: 3vw; */
+}
+
+
+.about-item {
+    vertical-align:  middle;  
+    padding: 3vw;
+    padding-left:5vw;
+}
+
+.description {
+    background-color: #FDF8F3;
+    padding: 5vw;
+}
+.description h1 {
+    font-size: 2em;
+    padding: 1.5em 0 0 1em;
+}
+.description p {
+    padding: 2em;
+    line-height: 1.5em;
+}
+.bigcup {
+    padding-bottom: 1vw;
+    background-color: #fe5200;
+    text-align: center;
+    
+}
+/* animation when you hover */
+.bigcup img:hover {
+    animation: wiggle 2s linear infinite;
+    cursor: pointer;
+}
+
+
+/* Keyframes */
+@keyframes wiggle {
+    0%, 7% {
+      transform: rotateZ(0);
+    }
+    15% {
+      transform: rotateZ(-15deg);
+    }
+    20% {
+      transform: rotateZ(10deg);
+    }
+    25% {
+      transform: rotateZ(-10deg);
+    }
+    30% {
+      transform: rotateZ(6deg);
+    }
+    35% {
+      transform: rotateZ(-4deg);
+    }
+    40%, 100% {
+      transform: rotateZ(0);
+    }
+  }
+  
+
+/* product section styling */
+#products {
+    background-color: #FFE7AC;
+    padding:3vw;
+}
+
+#products h1 {
+    text-align: center;
+    padding-bottom: 1.5em;
+    letter-spacing: 0.1em;
+    font-size: 2.5vw;
+    text-shadow: 1px 1px rgba(188, 188, 188, 0.9);
+}
+.circles {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.product {
+    text-align: center;
+}
+.circle {
+    background: #FF7A59;
+    width: 20vw;
+    height: 20vw;
+    border-radius: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
+.circle img{
+    padding-top:2em;
+}
+.circle img:hover {
+    transform: scale(1.2);
+    transition: 0.5s;
+}
+.item1 {
+    margin-top: 2em;
+    width:13vw;
+}
+.item2 {
+    width: 13vw;
+}
+.item3 {
+    width:13vw;
+}
+.product p {
+    text-align: center;
+    padding:1em;
+}
+
+
+/* Contact section styling */
+#contact {
+    background-image: linear-gradient(to right, #E6AE49, #DD6F68);
+    background-color: #E6AE49;
+    padding:3vw 0;
+}
+
+#contact h1{
+    text-align: center;
+    padding:0.5em;
+    color: white;
+    letter-spacing: 0.05em;
+}
+#contact p {
+    text-align: center;
+    margin:0 auto 2em auto;
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+}
+.form-area {
+    display: flex;
+    justify-content: center;
+    margin: 0 7vw;
+}
+.form-img img{
+    width: 35vw;
+    /* object-fit: cover; */
+}
+
+.form-img:hover {
+    animation: Rotate 1.5s linear;
+}
+
+/* rotate */
+@keyframes Rotate
+{
+    from { transform: rotate(0deg) }
+    to { transform: rotate(360deg) } 
+}
+
+
+input[type=text], [type=email],select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical; 
+  }
+  
+  input[type=submit] {
+    background-color: #3C131B;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .submit-button {
+    text-align: center;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #60212d;
+  }
+  
+  .form-container {
+    border-radius: 5px;
+    background-color: #FDF8F3;
+    padding: 20px;
+    box-shadow: 0.5em 0.5em 0.5em grey;
+  }
+
+/* style footer */
+footer {
+    padding: 0 5vw;
+    background-color: #3C131B;
+    background-image: url(./logo.jpeg);
+    background-size: 15vw, 35vw;
+    background-position: left bottom, right bottom;
+    background-repeat: no-repeat, no-repeat;
+}
+#company {
+    display: flex; 
+    justify-content: flex-start; 
+}
+
+.company-logo img {
+    width: 12em;
+}
+
+.company-info {
+    background-color: rgba(255,255,255,0.5);
+    padding: 2vw 15vw 2vw 5vw;
+    line-height: 2em;
+    color:#3C131B;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    text-align: left;
+}
+h2 {
+    color: #ccc;
+    margin: 0 0 1em 0;
+}
+
+/* mobile  */
+@media (max-width: 767px) {
+    #top-container {  
+        position: relative; 
+        top: 0; 
+        left: 0; 
+    }
+    #product-name img{
+        width:40vw;
+    }
+    #about , .circles{
+      display: block; 
+    }
+    .circle {
+        width:30vw;
+        height: 30vw;;
+    }
+    .bigcup img {
+        width:40vw;
+    }
+    .item1, .item2{
+        margin-top: 0;
+        width:30vw;
+    }
+    .item3 {
+        width:20vw;
+    }
+    .form-img img{
+        display: none;
+    }
+    #company {
+        justify-content: center; 
+    }
+
+}

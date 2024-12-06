@@ -1,0 +1,313 @@
+/**
+red - #cf2e2e
+cyan - #00d084
+white - #fffffb
+black - #0e0e0e
+ */
+ html{scroll-behavior: smooth;}
+ body{
+     background-color: #1030e7;
+     margin: 0 2%;
+     transition: all .5s linear;
+ }
+ h1,h2,h3,h4,h5,h6{font-family: "Poppins", sans-serif;}
+ p,a,li,figcaption,label{
+     font-family: "Roboto", sans-serif;
+     font-size: 1.2em;
+     text-decoration: none;
+ }
+ header li a{
+     color: #0e0e0e;
+     border-bottom: solid 2px #fffffb;
+     transition: all .25s linear;
+ }
+ header li a:hover{
+     border-bottom: solid 2px #cf2e2e;
+ }
+ /* default header */
+ .default-nav{
+     display: flex;
+     align-items: center;
+     height: 130px;
+     background-color: #1030e7;
+     width: 100%;
+ }
+ .default-nav div{
+     flex-grow: 1;
+     height: 120px;
+     text-align: center;
+ }
+ .default-nav div img{
+     width: auto;
+     height: 100%;
+ }
+ .default-nav menu{
+     display: flex;
+     margin: 0;
+     padding: 0;
+     list-style: none;
+     width: 100%;
+     justify-content: space-evenly;
+ }
+ .default-nav menu li{
+     padding: 0 10px;
+ }
+ /* after scroll nav*/
+ .after-scroll-nav{
+     position: fixed;
+     top: -75;
+     width: 100%;
+     display: flex;
+     align-items: center;
+     height: 75px;
+     background-color: #fffffb;
+     z-index: 9999;
+     transition: all .5s linear;
+ }
+ .after-scroll-nav div{
+     width: auto;
+     height: 100%;
+     flex-grow: 1;
+ }
+ .after-scroll-nav div img{
+     width: auto;
+     height: 100%;
+ }
+ .after-scroll-nav menu{
+     list-style: none;
+     display: flex;
+     height: 100%;
+     margin: 0;
+     padding: 0;
+ }
+ .after-scroll-nav menu li{
+     display: flex;
+     align-items: center;
+     padding: 0 10px;
+ }
+ .fullbody{
+     margin: 0 0;
+ }
+ .scrolledHeader .after-scroll-nav{
+     top: 0;
+ }
+ .masterhead{
+     height: 100vh;
+     background-image: url("../img/house-hero.jpg");
+     background-size: cover;
+     background-position: center;
+     background-attachment: fixed;
+ }
+ .mask{
+     width: 100%;
+     height: 100%;
+     background-color: rgba(0,0,0,.7);
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+ }
+ .masterhead h1{
+     font-size: 4.5em;
+     color: #fffffb;
+     margin-top: 0;
+ }
+ /* arrow */
+ .masterhead .arrow,
+ .masterhead .arrow::before{
+     position: absolute;
+     left: 50%;
+ }
+ .masterhead .arrow{
+     width: 40px;
+     height: 40px;
+     top: 85%;
+     margin: -20px 0 0 -20px;
+     border-left: none;
+     border-top: none;
+     border-right: solid 5px #fffffb;
+     border-bottom: solid 5px #fffffb;
+     transform: rotate(45deg);
+ /*animate*/
+ animation-name: arrow;
+ animation-interaction-count: infinite;
+ animation-duration: 2s;
+ }
+ @keyframes .arrow{
+     0%{
+         opacity: 0;
+     }
+     50%{
+         opacity: 0;
+         transform: translate(-10px, -10px);
+     }
+ }
+ /** product card **/
+ .row-1{
+     display: grid;
+     grid-template-columns: repeat(3,1fr);
+     padding: 25px;
+     background-color: #0e0e0e;
+ }
+ .product-card{
+     width: 80%;
+     position: relative;
+     margin:  0 auto;
+ }
+ .badge{
+     position: absolute;
+     left: 0;
+     top: 20px;
+     text-transform: uppercase;
+     font-size: 13px;
+     font-weight: 700;
+     background-color: #00d084;
+     color: #fffffb;
+     padding: 3px 10 px;
+ }
+ .product-thumb{
+     height: 300px;
+     padding:50px;
+     background-size: cover;
+     background-position: center;
+ }
+ .condo{background-image: url(..//img/condo.jpg);}
+ .town{background-image: url(../img/townhouse.jpg);}
+ .product-details{padding: 5px;}
+ .product-details h4 a{
+     font-weight: 500;
+     display: block;
+     margin-bottom: 15px;
+     text-transform: uppercase;
+     color: #fffffb;
+ }
+ /* testimonials */
+ .row-2{
+     height: 500px;
+     margin-bottom: 50px;
+ }
+ .slider{
+     height: 100%;
+     position: relative;
+     overflow: hidden;
+     display: flex;
+     flex-flow: row nowrap;
+     align-items: flex-end;
+     justify-content: center;
+ }
+ .slider-nav{
+     width: 12px;
+     height: 12px;
+     margin: 2rem 12px;
+     border-radius:  50%;
+     z-index: 10;
+     outline: 6px solid #ccc;
+     outline-offset: -6px;
+     cursor: pointer;
+     appearance: none;
+     backface-visibility: hidden;
+ }
+ .slider-nav:checked{
+     animation: check 0.4s linear forwards;
+ }
+ .slider-nav:checked{:nth-of-type(1) ~ .slider-inner{
+     left: 0;
+ }
+ .slider-nav:checked{:nth-of-type(2) ~ .slider-inner{
+     left: -100%;
+ }
+ .slider-nav:checked{:nth-of-type(3) ~ .slider-inner{
+     left: -200%;
+ }
+ .slider-nav:checked{:nth-of-type(4) ~ .slider-inner{
+     left: -300%;
+ }
+ .slider-inner{
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 400%;
+     height: 100%;
+     display: flex;
+     flex-flow: row nowrap;
+     transition: left 0.4s;
+ }
+ .slider-contents{
+     height: 100%;
+     padding: 2rem;
+     text-align: center;
+     display: flex;
+     flex: 1;
+     flex-flow: column nowrap;
+     align-items: center;
+     justify-content:center;
+ }
+ .slider-image{
+     width: auto;
+     height: 100px;
+     clip-path: circle(50%);
+ }
+ @keyframes check{
+     50%{
+         outline-color: #333;
+         box-shadow: 0 0 0 12px #333, 0 0 0 36px rgba(51, 51, 51, .2);
+     }
+     100%{
+         outline-color: #333;
+         box-shadow: 0 0 0 0 #333, 0 0 0 0 rgba(51, 51, 51, .2);
+     }
+ }
+ 
+ /* row 3 */
+ .row-3{
+     background-color: #0e0e0e;
+     padding: 2% 5%;
+     text-align: center;
+ }
+ .row-3 h4 {
+     font-size: 4em;
+     margin-bottom: 0;
+ }
+ .row-3 h4 .row-3 p, .row-3 label{
+     color: #fffffb;
+ }
+ .row-3 form section{
+     display: grid;
+     grid-template-columns: repeat(3,1fr);
+     padding: 25px 0;
+     text-align: left;
+     grid-gap: 25px;
+ }
+ .row-3 form{
+     margin-bottom: 50px;
+ 
+ }
+ .row-3 form input{
+     width: 100px;
+     padding: 15px 5px;
+     font-size: 1.2em;
+     border-radius: 3px;
+     border: solid 2px #0e0e0e;
+ }
+ .row-3 form input:focus{
+     outline: none;
+ }
+ .row-3 mark{
+     background-color: #00d084;
+     color: #cf2e2e;
+ }
+ /** footer **/
+ footer{
+     width: 100%;
+     display: grid;
+     grid-template-columns: repeat(3,1fr);
+ }
+ footer div:nth-child(1){
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
+ footer div:nth-child(1) img{
+     width: auto;
+     height: 250px;
+ }

@@ -1,13 +1,153 @@
 <!doctype html>
-<html>
+<html lang="en">
     <head>
-    <meta charset=""utf-8">
-    <tittle>Hello World</tittle>
-    <meta name=""viewport" content=""width=devide-width, initial-scale="1">
-    <meta name=""description" content=""this is the code forour week 1 class">
-    <meta name=""robots" content=""noidex, nofllow">
-    
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Lab5">
+        <meta name="robots" content="noindex, nofollow">
+        <title>Lab 5</title>
+        <!-- add fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <!-- add js/jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="./js/custom-js.js"></script>
+        <!-- add CSS & icons -->
+        <link rel="stylesheet" href="./fontawesome/css/all.css">
+        <link rel="stylesheet" href="./css/style.css">
     </head>
+    <body>
+        <header>
+            <nav class="default-nav">
+                <menu>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                </menu>
+                <div>
+                    <!-- logo -->
+                    <a href="index.html"><img src="./img/white-logo.png" alt="header logo"></a>
+                </div>
+                <menu>
+                    <li><a href="#">Shop</a></li>
+                    <li><a href="#">Contact</a></li>
+                </menu>
+            </nav>
+            </header>
+        <main id="home-main-content">
+            <section class="masthead">
+                <div class="mask">
+                    <h1>Construction Website</h1>
+                    <!-- add animated arrow -->
+                    <div class="arrow"></div>
+                </div>
+            </section>
+            <section class="row-1">
+                <!-- add our product cards (this is our second CTA): The reason for the product card being so high on our page is because this is the main purpose of the website. -->
+                <div class="product-card">
+                    <!-- Condos -->
+                    <div class="badge"><h4>Coming Soon</h4></div>
+                    <div class="product-thumb condo">
+                        <!-- background image -->
+                    </div>
+                    <div class="product-details">
+                        <h4><a href="#">Move-In-Ready Condos</a></h4>
+                        <!-- add button -->
+                    </div>
+                </div>
+                <div class="product-card">
+                    <!-- Townhouse -->
+                    <div class="badge"><h4>Coming Soon</h4></div>
+                    <div class="product-thumb town">
+                        <!-- background image -->
+                    </div>
+                    <div class="product-details">
+                        <h4><a href="#">Move-In-Ready Townhomes</a></h4>
+                        <!-- add button -->
+                    </div>
+                </div>
+                <div class="product-card">
+                    <!-- Detached -->
+                    <div class="badge"><h4>Coming Soon</h4></div>
+                    <div class="product-thumb house">
+                        <!-- background image -->
+                    </div>
+                    <div class="product-details">
+                        <h4><a href="#">Move-In-Ready Homes</a></h4>
+                        <!-- add button -->
+                    </div>
+                </div>
+            </section>
+            <!-- the reason behind the next two sections is to attempt to build trust. This very important for this industry because it is one of the biggest purchases that someone will make in their lifetime ... that makes this whole process stressful!! -->
+            <section class="row-2">
+                <h3>Why This Company</h3>
+                <!-- slider -->
+                <div class="slider">
+                    <input type="radio" name="slider" title="slide1" checked="checked" class="slider-nav"/>
+                    <input type="radio" name="slider" title="slide2" class="slider-nav"/>
+                    <input type="radio" name="slider" title="slide3" class="slider-nav"/>
+                    <input type="radio" name="slider" title="slide4" class="slider-nav"/>
+                    <div class="slider-inner">
+                        <div class="slider-contents">
+                            <img class="slider-image" src="./img/1.jpg" alt="headshot">
+                            <h2 class="slider-caption">person one</h2>
+                            <p class="slider-txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At cupiditate omnis possimus illo quos, corporis minima!</p>
+                        </div>
+                        <div class="slider-contents">
+                            <img class="slider-image" src="./img/2.jpg" alt="headshot">
+                            <h2 class="slider-caption">person two</h2>
+                            <p class="slider-txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At cupiditate omnis possimus illo quos, corporis minima!</p>
+                        </div>
+                        <div class="slider-contents">
+                            <img class="slider-image" src="./img/4.jpg" alt="headshot">
+                            <h2 class="slider-caption">person three</h2>
+                            <p class="slider-txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At cupiditate omnis possimus illo quos, corporis minima!</p>
+                        </div>
+                        <div class="slider-contents">
+                            <img class="slider-image" src="./img/7.jpg" alt="headshot">
+                            <h2 class="slider-caption">person four</h2>
+                            <p class="slider-txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At cupiditate omnis possimus illo quos, corporis minima!</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- now our subscribe form  -->
+            <section class="row-3">
+                <div>
+                    <form action="" method="post">
+                        <h4>Subscribe to our family.</h4>
+                        <p>Be the first to find out about our new communities.</p>
+                        <section>
+                            <div>
+                                <label>First Name <mark>*</mark></label>
+                                <br>
+                                <input type="text" name="fname" required>
+                            </div>
+                            <div>
+                                <label>Last Name <mark>*</mark></label>
+                                <br>
+                                <input type="text" name="lname" required>
+                            </div>
+                            <div>
+                                <label>Email <mark>*</mark></label>
+                                <br>
+                                <input type="email" name="email" required>
+                            </div>
+                        </section>
+                        <input type="submit" value="Subscribe">
+                    </form>
+                </div>
+            </section>
+        </main>
+    <footer>
+        <!-- logo container -->
+        <div>
+            <a href="index.html"><img src="./img/logo.png" alt="footer logo"></a>
+        </div>
+        <!-- about information -->
+        <div></div>
+        <!-- book an appointment -->
+        <div></div>
+    </footer>
+    </body>
 </html>
-
-
